@@ -129,52 +129,15 @@
       <div class="contact-info">
         <dl>
           <dt>練習場所</dt>
-          <dd>仮：○○市民センター　多目的ホール</dd>
+          <dd>秦野市南ヶ丘公民会　多目的ホール</dd>
           <dt>メール</dt>
-          <dd>仮：info@sumairu-taiko.example.com</dd>
-          <dt>電話</dt>
-          <dd>仮：090-0000-0000（代表：○○）</dd>
+          <dd>右のGoogleフォームからお願いします。</dd>
         </dl>
       </div>
     </div>
 
     <div>
-      <form>
-        <div class="field">
-          <label>お問い合わせ種別<span class="req">必須</span></label>
-          <div class="radio-group">
-            <label><input type="radio" name="type" checked> 見学希望</label>
-            <label><input type="radio" name="type"> 出演依頼</label>
-            <label><input type="radio" name="type"> 入会希望</label>
-            <label><input type="radio" name="type"> その他</label>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="name">お名前<span class="req">必須</span></label>
-          <input type="text" id="name" name="name" placeholder="山田 太郎">
-        </div>
-
-        <div class="field">
-          <label for="email">メールアドレス<span class="req">必須</span></label>
-          <input type="email" id="email" name="email" placeholder="example@mail.com">
-        </div>
-
-        <div class="field">
-          <label for="tel">電話番号</label>
-          <input type="tel" id="tel" name="tel" placeholder="090-0000-0000">
-        </div>
-
-        <div class="field">
-          <label for="message">お問い合わせ内容<span class="req">必須</span></label>
-          <textarea id="message" name="message" placeholder="見学希望日や出演依頼の詳細など、ご自由にご記入ください。"></textarea>
-        </div>
-
-        <div class="submit-row">
-          <button type="submit" class="btn" style="border:none; cursor:pointer; font-family:inherit;">送信する</button>
-          <p class="form-note">※ このフォームは見本です。実際に送信するには、フォーム処理（メール送信サービスや問い合わせ管理サービスとの連携）の設定が必要です。</p>
-        </div>
-      </form>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmE0cjT_CGpLJSIu_R0sZmb_xnp17gyN9EtxqwufN7ll-UkA/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0" style="max-width:100%;">読み込んでいます…</iframe>
     </div>
 
   </div>
@@ -201,10 +164,7 @@
   document.querySelector('.nav-toggle').addEventListener('click', () => {
     document.querySelector('.main-nav').classList.toggle('open');
   });
-  document.querySelector('form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('これは見本フォームです。実際の送信には別途設定が必要です。');
-  });
+
 </script>
 </body>
 </html>
