@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | 素舞瑠（スマイル）</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+  @media (max-width: 860px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+  .reason-card {
+    display: flex;
+    gap: 16px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--washi);
+  }
+  .reason-card:first-child { border-top: 1px solid var(--washi); }
+  .reason-card .ji { font-family:'Shippori Mincho', serif; font-size: 1.3rem; color: var(--vermilion); flex: 0 0 36px; }
+  .reason-card h3 { font-size: 1rem; margin-bottom: 6px; }
+  .reason-card p { font-size: 0.86rem; color: var(--ink-soft); }
+
+  form { margin-top: 8px; }
+  .field { margin-bottom: 22px; }
+  .field label {
+    display: block;
+    font-size: 0.84rem;
+    margin-bottom: 8px;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+  }
+  .field label .req { color: var(--vermilion); font-size: 0.74rem; margin-left: 6px; }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--washi);
+    background: var(--cream);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .field textarea { min-height: 130px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--vermilion);
+  }
+  .radio-group { display: flex; flex-wrap: wrap; gap: 14px; }
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    padding: 10px 16px;
+    border: 1px solid var(--washi);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+  .radio-group input { accent-color: var(--vermilion); }
+
+  .submit-row { margin-top: 32px; }
+  .form-note { font-size: 0.78rem; color: var(--ink-soft); margin-top: 14px; }
+
+  .contact-info {
+    background: var(--cream-deep);
+    border: 1px solid var(--washi);
+    padding: 28px 26px;
+    margin-top: 36px;
+    font-size: 0.88rem;
+  }
+  .contact-info dt { color: var(--vermilion-deep); font-family:'Shippori Mincho', serif; margin-top: 14px; }
+  .contact-info dt:first-child { margin-top: 0; }
+  .contact-info dd { color: var(--ink-soft); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html" class="active">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E8B49A;">Contact</span>
+    <h1>お問い合わせ</h1>
+    <p>見学・入会のご希望、出演依頼など、お気軽にご連絡ください。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-layout">
+
+    <div>
+      <span class="eyebrow">こんなご相談を承っています</span>
+      <div class="reason-card">
+        <span class="ji">壱</span>
+        <div><h3>見学希望</h3><p>仮：練習はいつでも見学できます。動きやすい服装でお越しください。</p></div>
+      </div>
+      <div class="reason-card">
+        <span class="ji">弐</span>
+        <div><h3>出演依頼</h3><p>仮：お祭り・イベント・施設訪問演奏など、出演に関するご相談を承ります。</p></div>
+      </div>
+      <div class="reason-card">
+        <span class="ji">参</span>
+        <div><h3>入会希望</h3><p>仮：体験参加から始められます。経験の有無は問いません。</p></div>
+      </div>
+
+      <div class="contact-info">
+        <dl>
+          <dt>練習場所</dt>
+          <dd>仮：○○市民センター　多目的ホール</dd>
+          <dt>メール</dt>
+          <dd>仮：info@sumairu-taiko.example.com</dd>
+          <dt>電話</dt>
+          <dd>仮：090-0000-0000（代表：○○）</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div>
+      <form>
+        <div class="field">
+          <label>お問い合わせ種別<span class="req">必須</span></label>
+          <div class="radio-group">
+            <label><input type="radio" name="type" checked> 見学希望</label>
+            <label><input type="radio" name="type"> 出演依頼</label>
+            <label><input type="radio" name="type"> 入会希望</label>
+            <label><input type="radio" name="type"> その他</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="name">お名前<span class="req">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎">
+        </div>
+
+        <div class="field">
+          <label for="email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com">
+        </div>
+
+        <div class="field">
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="tel" placeholder="090-0000-0000">
+        </div>
+
+        <div class="field">
+          <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+          <textarea id="message" name="message" placeholder="見学希望日や出演依頼の詳細など、ご自由にご記入ください。"></textarea>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn" style="border:none; cursor:pointer; font-family:inherit;">送信する</button>
+          <p class="form-note">※ このフォームは見本です。実際に送信するには、フォーム処理（メール送信サービスや問い合わせ管理サービスとの連携）の設定が必要です。</p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="f-brand">素舞瑠 SUMAIRU</div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+  document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('これは見本フォームです。実際の送信には別途設定が必要です。');
+  });
+</script>
+</body>
+</html>

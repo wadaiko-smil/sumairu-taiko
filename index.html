@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>素舞瑠（スマイル）| 和太鼓サークル</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: flex-end;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .hero .photo-frame {
+    position: absolute;
+    inset: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .hero .scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(43,41,37,0.15) 0%, rgba(43,41,37,0.55) 65%, rgba(43,41,37,0.92) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-bottom: 72px;
+    color: var(--cream);
+  }
+  .hero-name {
+    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    color: var(--cream);
+    line-height: 1.15;
+  }
+  .hero-kana {
+    display: block;
+    font-size: 0.95rem;
+    letter-spacing: 0.4em;
+    color: var(--washi);
+    margin-top: 10px;
+    font-weight: 300;
+  }
+  .hero-copy {
+    margin-top: 28px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+    color: var(--cream);
+    max-width: 560px;
+    line-height: 1.9;
+  }
+  .hero-next {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 28px;
+    background: rgba(245,240,230,0.08);
+    border: 1px solid rgba(245,240,230,0.35);
+    border-radius: 2px;
+    backdrop-filter: blur(4px);
+  }
+  .hero-next .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--washi);
+  }
+  .hero-next .date {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.05rem;
+    color: var(--cream);
+  }
+  .hero-next .date strong { color: #E8B49A; }
+
+  .intro-row { display: flex; gap: 64px; align-items: flex-start; }
+  .intro-row .lead-col { flex: 1.1; }
+  .intro-row .num-col { flex: 0.9; display: flex; gap: 36px; }
+  .stat { flex: 1; }
+  .stat .figure { font-family: 'Shippori Mincho', serif; font-size: 2.2rem; color: var(--vermilion-deep); }
+  .stat .cap { font-size: 0.78rem; color: var(--ink-soft); margin-top: 4px; letter-spacing: 0.05em; }
+  @media (max-width: 820px) {
+    .intro-row { flex-direction: column; gap: 36px; }
+  }
+
+  .teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .teaser-card { background: var(--cream); border: 1px solid var(--washi); padding: 0; }
+  .teaser-card .photo-frame { height: 190px; }
+  .teaser-card .tc-body { padding: 22px 24px 26px; }
+  .teaser-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .teaser-card p { font-size: 0.9rem; color: var(--ink-soft); }
+  .teaser-card a.more { display: inline-block; margin-top: 14px; font-size: 0.8rem; color: var(--vermilion-deep); border-bottom: 1px solid var(--vermilion-deep); }
+  @media (max-width: 760px) { .teaser-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="photo-frame"><span>演奏写真をここに掲載予定<br>（推奨：横長 1920×1280px）</span></div>
+  <div class="scrim"></div>
+  <div class="wrap hero-content">
+    <h1 class="hero-name">素舞瑠
+      <span class="hero-kana">和太鼓サークル　SUMAIRU</span>
+    </h1>
+    <p class="hero-copy">一音に、笑顔を乗せて。<br>地域に響く和太鼓の音を、未来へ。</p>
+    <div class="hero-next">
+      <span class="label">NEXT STAGE</span>
+      <span class="date">〇月〇日（日）<strong>○○夏祭り</strong>　特設ステージにて出演</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">About Sumairu</span>
+    <div class="intro-row">
+      <div class="lead-col">
+        <h2 style="font-size:1.7rem; margin-bottom:18px;">太鼓を、<span class="brush">もっと身近に。</span></h2>
+        <p class="lead">素舞瑠（スマイル）は、地域のお祭りや文化祭での出演を中心に活動する和太鼓サークルです。経験は問いません。年齢も問いません。バチを握った瞬間から、誰もが舞台の主役になれる――そんな場所を目指しています。</p>
+      </div>
+      <div class="num-col">
+        <div class="stat"><div class="figure">仮 ○</div><div class="cap">設立年目</div></div>
+        <div class="stat"><div class="figure">仮 ○○名</div><div class="cap">現メンバー</div></div>
+        <div class="stat"><div class="figure">仮 ○回</div><div class="cap">年間出演実績</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Explore</span>
+    <h2 style="font-size:1.6rem;">素舞瑠を、もっと知る</h2>
+    <div class="teaser-grid">
+      <div class="teaser-card">
+        <div class="photo-frame"><span>練習風景写真（仮）</span></div>
+        <div class="tc-body">
+          <h3>活動紹介</h3>
+          <p>練習の様子やお祭り出演など、日々の活動をご紹介します。</p>
+          <a class="more" href="activities.html">詳しく見る ＞</a>
+        </div>
+      </div>
+      <div class="teaser-card">
+        <div class="photo-frame"><span>出演予定イメージ（仮）</span></div>
+        <div class="tc-body">
+          <h3>出演予定・お知らせ</h3>
+          <p>次回の出演情報や最新のお知らせを掲載しています。</p>
+          <a class="more" href="schedule.html">詳しく見る ＞</a>
+        </div>
+      </div>
+      <div class="teaser-card">
+        <div class="photo-frame"><span>集合写真（仮）</span></div>
+        <div class="tc-body">
+          <h3>写真ギャラリー</h3>
+          <p>演奏や練習、お祭りでの様子を写真でお届けします。</p>
+          <a class="more" href="gallery.html">詳しく見る ＞</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap text-center">
+    <span class="eyebrow">Join Us</span>
+    <h2 style="font-size:1.7rem; margin-bottom:16px;">見学・体験、<span class="brush">いつでも歓迎</span>しています。</h2>
+    <p class="lead" style="max-width:520px; margin:0 auto 32px;">太鼓に触れたことがない方も大歓迎。まずは見学から、お気軽にお越しください。</p>
+    <a href="contact.html" class="btn">お問い合わせ・見学希望はこちら</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-brand">素舞瑠 SUMAIRU</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

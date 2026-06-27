@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動紹介 | 素舞瑠（スマイル）</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .act-block {
+    display: flex;
+    gap: 56px;
+    align-items: center;
+    padding: 64px 0;
+    border-bottom: 1px solid var(--washi);
+  }
+  .act-block:last-child { border-bottom: none; }
+  .act-block.reverse { flex-direction: row-reverse; }
+  .act-block .photo-frame { flex: 1; height: 320px; }
+  .act-block .act-text { flex: 1; }
+  .act-text .eyebrow { margin-bottom: 14px; }
+  .act-text h2 { font-size: 1.5rem; margin-bottom: 16px; }
+  .act-text p { color: var(--ink-soft); font-size: 0.95rem; }
+  .act-text ul { margin-top: 18px; padding-left: 20px; color: var(--ink-soft); font-size: 0.9rem; }
+  .act-text li { margin-bottom: 8px; }
+  @media (max-width: 820px) {
+    .act-block, .act-block.reverse { flex-direction: column; gap: 28px; }
+    .act-block { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html" class="active">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E8B49A;">What We Do</span>
+    <h1>活動紹介</h1>
+    <p>練習からお祭り出演まで、素舞瑠の日常をご紹介します。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="act-block">
+      <div class="photo-frame"><span>練習風景写真（仮）</span></div>
+      <div class="act-text">
+        <span class="eyebrow">Practice</span>
+        <h2>練習風景</h2>
+        <p>仮：月に2回、地域の体育館をお借りして練習しています。基礎打ちから始まり、曲の振り付けや息を合わせる稽古まで、和気あいあいとした雰囲気の中で行っています。初心者にはベテランメンバーが付き添い、丁寧に指導します。</p>
+        <ul>
+          <li>基礎打ち・バチの持ち方から指導</li>
+          <li>初心者向け練習日を月1回開催</li>
+          <li>練習後は皆でお茶を飲みながら交流</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="act-block reverse">
+      <div class="photo-frame"><span>地域イベント出演写真（仮）</span></div>
+      <div class="act-text">
+        <span class="eyebrow">Local Events</span>
+        <h2>地域イベント出演</h2>
+        <p>仮：地域の文化祭や福祉施設の慰問演奏など、さまざまな場で太鼓を披露しています。観客との距離が近いイベントも多く、演奏後に声をかけていただけることがメンバーの励みになっています。</p>
+        <ul>
+          <li>地域文化祭への出演（年○回）</li>
+          <li>福祉施設・敬老会での慰問演奏</li>
+          <li>小学校での太鼓体験授業</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="act-block">
+      <div class="photo-frame"><span>お祭り出演写真（仮）</span></div>
+      <div class="act-text">
+        <span class="eyebrow">Festivals</span>
+        <h2>お祭り参加</h2>
+        <p>仮：夏祭りや秋祭りなど、地域の祭礼にも積極的に参加しています。屋外の特設ステージでの演奏は迫力満点。法被姿で太鼓を打つ瞬間は、メンバー一同が一年で最も心待ちにしている時間です。</p>
+        <ul>
+          <li>○○夏祭り　特設ステージ出演（毎年）</li>
+          <li>地域神社の例大祭への奉納演奏</li>
+          <li>近隣サークルとの合同ステージ</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="alt text-center">
+  <div class="wrap">
+    <h2 style="font-size:1.5rem; margin-bottom:16px;">次回の出演予定は<span class="brush">こちら</span></h2>
+    <a href="schedule.html" class="btn">出演予定・お知らせを見る</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="f-brand">素舞瑠 SUMAIRU</div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

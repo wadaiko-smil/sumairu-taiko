@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+:root {
+  --ink: #2B2925;
+  --ink-soft: #4A463F;
+  --cream: #F5F0E6;
+  --cream-deep: #ECE4D3;
+  --washi: #D8D2C4;
+  --vermilion: #A23B2E;
+  --vermilion-deep: #7E2C22;
+  --indigo: #23344D;
+  --indigo-soft: #3A4D68;
+  --max-w: 1100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.9;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 240, 230, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--washi);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.brand-kanji {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.brand-kana {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--vermilion);
+  font-weight: 500;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+nav.main-nav a {
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  position: relative;
+  padding-bottom: 6px;
+  white-space: nowrap;
+}
+
+nav.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--vermilion);
+  transition: width 0.25s ease;
+}
+
+nav.main-nav a:hover::after,
+nav.main-nav a.active::after {
+  width: 100%;
+}
+
+nav.main-nav a.active { color: var(--vermilion-deep); font-weight: 500; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  nav.main-nav {
+    position: fixed;
+    top: 84px;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--washi);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  nav.main-nav.open { max-height: 400px; }
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 32px 24px;
+  }
+  nav.main-nav li { border-bottom: 1px solid var(--washi); }
+  nav.main-nav a { display: block; padding: 16px 0; }
+  .nav-toggle { display: block; }
+}
+
+/* ---------- Brush underline signature ---------- */
+.brush {
+  display: inline-block;
+  position: relative;
+}
+.brush::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  bottom: -0.18em;
+  height: 0.42em;
+  background: var(--vermilion);
+  opacity: 0.85;
+  border-radius: 2px 6px 3px 8px / 6px 3px 7px 2px;
+  z-index: -1;
+}
+
+/* ---------- Eyebrow label ---------- */
+.eyebrow {
+  font-size: 0.74rem;
+  letter-spacing: 0.32em;
+  color: var(--vermilion);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* ---------- Hachi divider (drumstick mark) ---------- */
+.hachi-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 64px 0;
+  color: var(--washi);
+}
+.hachi-divider .line { height: 1px; background: var(--washi); flex: 1; max-width: 220px; }
+.hachi-divider .mark { font-size: 1.1rem; color: var(--vermilion); transform: rotate(20deg); }
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 90px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--vermilion-deep) 0%, transparent 70%);
+  opacity: 0.5;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--cream);
+  position: relative;
+}
+.page-hero p {
+  margin-top: 14px;
+  color: var(--washi);
+  font-size: 1rem;
+  max-width: 520px;
+  position: relative;
+}
+
+/* ---------- Section spacing ---------- */
+section { padding: 84px 0; }
+section.alt { background: var(--cream-deep); }
+
+/* ---------- Placeholder photo frame (drum-head style) ---------- */
+.photo-frame {
+  background: linear-gradient(135deg, var(--washi) 0%, #c9c1ad 100%);
+  border: 1px solid #c2baa4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(45deg, rgba(43,41,37,0.035) 0 2px, transparent 2px 14px);
+}
+.photo-frame span {
+  position: relative;
+  padding: 8px 14px;
+  background: rgba(245,240,230,0.7);
+  border-radius: 3px;
+}
+.photo-frame.round { border-radius: 50%; aspect-ratio: 1/1; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--vermilion);
+  color: var(--cream);
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover { background: var(--vermilion-deep); transform: translateY(-1px); }
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--cream);
+  color: var(--cream);
+}
+.btn.outline:hover { background: rgba(245,240,230,0.1); }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--ink);
+  color: var(--washi);
+  padding: 56px 0 32px;
+  margin-top: 0;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+footer .f-brand {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.2rem;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+footer nav a { font-size: 0.84rem; color: var(--washi); }
+footer nav a:hover { color: var(--cream); }
+.f-bottom {
+  border-top: 1px solid rgba(216,210,196,0.18);
+  margin-top: 36px;
+  padding-top: 20px;
+  font-size: 0.76rem;
+  color: #8a8678;
+  text-align: center;
+}
+
+/* ---------- Utility ---------- */
+.text-center { text-align: center; }
+.lead { font-size: 1.05rem; color: var(--ink-soft); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+@media (max-width: 760px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}

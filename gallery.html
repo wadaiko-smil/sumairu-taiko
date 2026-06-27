@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写真ギャラリー | 素舞瑠（スマイル）</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .filter-btn {
+    padding: 9px 20px;
+    border: 1px solid var(--washi);
+    background: var(--cream);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--ink-soft);
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover { border-color: var(--vermilion); color: var(--vermilion-deep); }
+  .filter-btn.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+  .gallery-grid {
+    margin-top: 40px;
+    columns: 3 220px;
+    column-gap: 20px;
+  }
+  .g-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  .g-item .photo-frame {
+    height: 230px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .g-item:nth-child(3n+1) .photo-frame { height: 290px; }
+  .g-item:nth-child(5n+2) .photo-frame { height: 180px; }
+  .g-item .photo-frame:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(43,41,37,0.15); }
+  .g-item .g-cap { font-size: 0.74rem; color: var(--ink-soft); margin-top: 8px; letter-spacing: 0.03em; }
+  @media (max-width: 600px) { .gallery-grid { columns: 1; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html" class="active">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E8B49A;">Gallery</span>
+    <h1>写真ギャラリー</h1>
+    <p>演奏・集合写真・練習風景・お祭りの様子をお届けします。（写真は準備中のため仮枠で表示しています）</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="performance">演奏中</button>
+      <button class="filter-btn" data-filter="group">集合写真</button>
+      <button class="filter-btn" data-filter="practice">練習風景</button>
+      <button class="filter-btn" data-filter="festival">お祭り</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- items injected -->
+    </div>
+  </div>
+</section>
+
+<section class="alt text-center">
+  <div class="wrap">
+    <h2 style="font-size:1.5rem; margin-bottom:16px;">写真は随時<span class="brush">追加予定</span>です</h2>
+    <p class="lead" style="max-width:480px; margin: 0 auto 0;">最新の演奏写真や出演報告は、お知らせページでもご案内しています。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="f-brand">素舞瑠 SUMAIRU</div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+
+  const photos = [
+    { cat: 'performance', label: '演奏中の写真（仮）', cap: '○○祭　ステージ演奏' },
+    { cat: 'group', label: '集合写真（仮）', cap: '練習後の集合写真' },
+    { cat: 'practice', label: '練習風景（仮）', cap: '基礎打ちの練習' },
+    { cat: 'festival', label: 'お祭りの様子（仮）', cap: '地域夏祭りにて' },
+    { cat: 'performance', label: '演奏中の写真（仮）', cap: '地域文化祭　演奏風景' },
+    { cat: 'practice', label: '練習風景（仮）', cap: '曲合わせ練習' },
+    { cat: 'group', label: '集合写真（仮）', cap: '新メンバー歓迎会' },
+    { cat: 'festival', label: 'お祭りの様子（仮）', cap: '提灯と太鼓' },
+    { cat: 'performance', label: '演奏中の写真（仮）', cap: '夜間特設ステージ' },
+    { cat: 'practice', label: '練習風景（仮）', cap: '初心者指導の様子' },
+    { cat: 'festival', label: 'お祭りの様子（仮）', cap: '神社例大祭　奉納演奏' },
+    { cat: 'group', label: '集合写真（仮）', cap: '出演後の記念撮影' },
+  ];
+
+  const grid = document.getElementById('galleryGrid');
+  function render(filter) {
+    grid.innerHTML = '';
+    photos
+      .filter(p => filter === 'all' || p.cat === filter)
+      .forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'g-item';
+        item.innerHTML = `
+          <div class="photo-frame"><span>${p.label}</span></div>
+          <div class="g-cap">${p.cap}</div>
+        `;
+        grid.appendChild(item);
+      });
+  }
+  render('all');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render(btn.dataset.filter);
+    });
+  });
+</script>
+</body>
+</html>

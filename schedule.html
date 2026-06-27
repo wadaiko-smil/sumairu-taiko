@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出演予定・お知らせ | 素舞瑠（スマイル）</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .update-note {
+    background: var(--cream-deep);
+    border-left: 3px solid var(--vermilion);
+    padding: 18px 24px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+
+  .sched-list { margin-top: 36px; }
+  .sched-item {
+    display: flex;
+    gap: 28px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--washi);
+  }
+  .sched-item:first-child { border-top: 1px solid var(--washi); }
+  .sched-date {
+    flex: 0 0 110px;
+    font-family: 'Shippori Mincho', serif;
+  }
+  .sched-date .m { font-size: 1.6rem; color: var(--vermilion-deep); display:block; line-height: 1.1; }
+  .sched-date .y { font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.1em; }
+  .sched-body h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .sched-body p { font-size: 0.88rem; color: var(--ink-soft); }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border: 1px solid var(--vermilion);
+    color: var(--vermilion-deep);
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+
+  .news-list { margin-top: 36px; }
+  .news-item {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--washi);
+    font-size: 0.9rem;
+  }
+  .news-item:first-child { border-top: 1px solid var(--washi); }
+  .news-item .n-date { flex: 0 0 110px; color: var(--ink-soft); font-size: 0.82rem; }
+  .news-item .n-cat {
+    flex: 0 0 90px;
+    font-size: 0.74rem;
+    color: var(--indigo);
+    letter-spacing: 0.05em;
+  }
+  .news-item .n-text { flex: 1; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html" class="active">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E8B49A;">Schedule &amp; News</span>
+    <h1>出演予定・お知らせ</h1>
+    <p>このページは年2回ほどの更新を予定しています。最新情報はこちらをご確認ください。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="update-note">最終更新：仮 20○○年○月○日</div>
+
+    <span class="eyebrow" style="margin-top:40px;">Upcoming</span>
+    <h2 style="font-size:1.5rem;">出演予定</h2>
+
+    <div class="sched-list">
+      <div class="sched-item">
+        <div class="sched-date"><span class="m">○月</span><span class="y">20○○</span></div>
+        <div class="sched-body">
+          <span class="tag">お祭り</span>
+          <h3>○○祭　特設ステージ出演</h3>
+          <p>仮：○○公園にて開催される地域の夏祭りに出演します。開演時間・会場詳細は近日掲載予定です。</p>
+        </div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-date"><span class="m">○月</span><span class="y">20○○</span></div>
+        <div class="sched-body">
+          <span class="tag">文化祭</span>
+          <h3>地域文化祭出演</h3>
+          <p>仮：○○市文化センターで行われる地域文化祭に出演予定です。新曲のお披露目も予定しています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">News</span>
+    <h2 style="font-size:1.5rem;">お知らせ</h2>
+    <div class="news-list">
+      <div class="news-item">
+        <div class="n-date">仮 20○○.○○</div>
+        <div class="n-cat">入会情報</div>
+        <div class="n-text">新メンバー募集中です。見学・体験はいつでも受け付けています。</div>
+      </div>
+      <div class="news-item">
+        <div class="n-date">仮 20○○.○○</div>
+        <div class="n-cat">出演報告</div>
+        <div class="n-text">○○祭での演奏が無事終了しました。写真はギャラリーページにて公開予定です。</div>
+      </div>
+      <div class="news-item">
+        <div class="n-date">仮 20○○.○○</div>
+        <div class="n-cat">お知らせ</div>
+        <div class="n-text">練習場所が一時的に変更となります。詳細はお問い合わせください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-center">
+  <div class="wrap">
+    <h2 style="font-size:1.5rem; margin-bottom:16px;">出演のご依頼も<span class="brush">承っております</span></h2>
+    <p class="lead" style="max-width:480px; margin: 0 auto 28px;">地域行事・イベントへの出演依頼はお問い合わせページよりご連絡ください。</p>
+    <a href="contact.html" class="btn">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="f-brand">素舞瑠 SUMAIRU</div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
