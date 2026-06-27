@@ -43,6 +43,71 @@
   .member-row .photo-frame { flex: 1; height: 280px; }
   .member-row .m-text { flex: 1; }
   @media (max-width: 760px) { .member-row { flex-direction: column; } }
+
+  /* 講師紹介 */
+  .instructor-wrap {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  .instructor-photo {
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .instructor-photo .photo-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .instructor-photo .i-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.15rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+  .instructor-photo .i-name-kana {
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .instructor-detail { flex: 1; }
+  .instructor-detail .i-title {
+    display: inline-block;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .instructor-detail p { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 24px; }
+  .career-list { list-style: none; padding: 0; }
+  .career-list li {
+    display: flex;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--washi);
+    font-size: 0.88rem;
+  }
+  .career-list li:first-child { border-top: 1px solid var(--washi); }
+  .career-list .c-year {
+    flex: 0 0 80px;
+    font-family: 'Shippori Mincho', serif;
+    color: var(--vermilion-deep);
+    font-size: 0.9rem;
+  }
+  .career-list .c-text { color: var(--ink-soft); }
+  @media (max-width: 760px) {
+    .instructor-wrap { flex-direction: column; gap: 32px; }
+    .instructor-photo { flex: none; width: 100%; }
+  }
 </style>
 </head>
 <body>
@@ -123,6 +188,30 @@
       <div class="photo-frame round"><span>メンバー集合写真<br>（仮）</span></div>
       <div class="m-text">
         <p class="lead">仮：現在、小学生から60代まで幅広い年齢層のメンバー約○○名が在籍しています。会社員、主婦、学生など職業もさまざまですが、太鼓を打つ時間は誰もが同じ「素舞瑠の一員」。初心者には経験者が丁寧に指導するので、安心してご参加いただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Instructor</span>
+    <h2 style="font-size:1.5rem;">講師紹介</h2>
+    <div class="instructor-wrap">
+      <div class="instructor-photo">
+        <div class="photo-frame"><span>講師写真（仮）</span></div>
+        <div class="i-name">仮　山田 太郎</div>
+        <div class="i-name-kana">YAMADA TARO</div>
+      </div>
+      <div class="instructor-detail">
+        <span class="i-title">プロ和太鼓奏者 ／ 素舞瑠 指導講師</span>
+        <p>仮：○○流和太鼓の宗家に師事し、20年以上にわたりプロ奏者として国内外で活躍。力強さの中に繊細さを持つ演奏スタイルが高く評価されています。素舞瑠では基礎から丁寧に、そして太鼓の楽しさを大切に指導しています。</p>
+        <ul class="career-list">
+          <li><span class="c-year">仮 20○○年</span><span class="c-text">○○和太鼓コンクール　最優秀賞受賞</span></li>
+          <li><span class="c-year">仮 20○○年</span><span class="c-text">○○文化センター主催　和太鼓公演　ソリスト出演</span></li>
+          <li><span class="c-year">仮 20○○年</span><span class="c-text">海外公演（○○・○○）にて日本伝統芸能を紹介</span></li>
+          <li><span class="c-year">仮 20○○年</span><span class="c-text">素舞瑠　指導講師に就任</span></li>
+        </ul>
       </div>
     </div>
   </div>
