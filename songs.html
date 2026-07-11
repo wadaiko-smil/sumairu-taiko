@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曲紹介 | 素舞瑠（スマイル）</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* 全体リード */
+  .songs-lead {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .songs-lead p {
+    font-size: 1.02rem;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  /* 曲ブロック */
+  .song-block {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--washi);
+  }
+  .song-block:last-child { border-bottom: none; }
+
+  .song-header {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .song-number {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.2rem;
+    color: var(--vermilion);
+    line-height: 1;
+  }
+  .song-title-wrap {}
+  .song-title-wrap h2 {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+  .song-composer-label {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  /* 本文レイアウト */
+  .song-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* 説明文 */
+  .song-story {
+    background: var(--cream-deep);
+    border-left: 3px solid var(--vermilion);
+    padding: 24px 28px;
+  }
+  .song-story .story-source {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .song-story p {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  /* 動画 */
+  .song-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--ink);
+  }
+  .song-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* 泡沫（説明文なし）は動画を中央寄せ */
+  .song-body.video-only {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
+  @media (max-width: 760px) {
+    .song-body { grid-template-columns: 1fr; gap: 28px; }
+    .song-body.video-only { max-width: 100%; }
+    .song-number { font-size: 1.6rem; }
+    .song-title-wrap h2 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-kanji">素舞瑠</span>
+      <span class="brand-kana">SUMAIRU</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="songs.html" class="active">曲紹介</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#E8B49A;">Our Songs</span>
+    <h1>曲紹介</h1>
+    <p>素舞瑠が演奏する曲と、その背景にある物語をご紹介します。</p>
+  </div>
+</section>
+
+<!-- リード文 -->
+<section>
+  <div class="wrap">
+    <div class="songs-lead">
+      <p>私たちは、太鼓の技術を磨くだけでなく、<br>地域とのつながりを大切にしながら、曲を演奏しています。<br>太古の昔から地域を支えてきた人の営みや思いに想像を膨らませてみてください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 開拓 -->
+<section class="alt">
+  <div class="wrap">
+    <div class="song-block">
+      <div class="song-header">
+        <span class="song-number">壱</span>
+        <div class="song-title-wrap">
+          <h2>開拓</h2>
+          <div class="song-composer-label">横山亮介 / 作曲</div>
+        </div>
+      </div>
+      <div class="song-body">
+        <div class="song-story">
+          <span class="story-source">霊樹（楠木）の伝説　―伊勢原市HPより―</span>
+          <p>昔、善波村にあった大楠は村中の自慢であったと同時に、村中が木陰となり作物がとれなかった。そんな大楠を伐って、大太鼓を作り残った木で橋を作った。大太鼓は橋を渡って、日向薬師に納められた。</p>
+        </div>
+        <div class="song-video">
+          <iframe src="https://www.youtube.com/embed/M6236a0WIME?si=wYmBPyaeFntFwDBA" title="開拓" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 共鳴 -->
+<section>
+  <div class="wrap">
+    <div class="song-block">
+      <div class="song-header">
+        <span class="song-number">弐</span>
+        <div class="song-title-wrap">
+          <h2>共鳴</h2>
+          <div class="song-composer-label">横山亮介 / 作曲</div>
+        </div>
+      </div>
+      <div class="song-body">
+        <div class="song-story">
+          <span class="story-source">破れ大太鼓の伝説　―伊勢原市HPより―</span>
+          <p>鎌倉時代に源頼朝が娘大姫の病気治癒を願って日向薬師を参詣した折に奉納された。この太鼓は「富士の巻き狩り」で使用され、凄まじい太鼓の響きで巻き狩りは大成功だったと伝えられている。その後、日向薬師に戻った太鼓は時を告げるために打ち鳴らされた。その音は山鳴りのように村を越えて、海辺まで響き渡りました。驚いた魚が寄り付かなくなり困った漁師たちが薬師へ押しかけ、太鼓の革を破ってしまったそうな。それ以来、皮は張られていない。日向薬師の大太鼓は重要有形文化財に指定されている。</p>
+        </div>
+        <div class="song-video">
+          <iframe src="https://www.youtube.com/embed/D9Ry_YSvV-M?si=2J75qVEK_uELGy-q" title="共鳴" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 泡沫 -->
+<section class="alt">
+  <div class="wrap">
+    <div class="song-block">
+      <div class="song-header">
+        <span class="song-number">参</span>
+        <div class="song-title-wrap">
+          <h2>泡沫</h2>
+          <div class="song-composer-label">横山亮介 / 作曲</div>
+        </div>
+      </div>
+      <div class="song-body video-only">
+        <div class="song-video">
+          <iframe src="https://www.youtube.com/embed/9UwK7MYTAGI?si=5Svv-KizAbHT5CDt" title="泡沫" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-center">
+  <div class="wrap">
+    <h2 style="font-size:1.5rem; margin-bottom:16px;">演奏の様子は<span class="brush">ギャラリー</span>でも</h2>
+    <a href="gallery.html" class="btn">写真ギャラリーを見る</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="f-brand">素舞瑠 SUMAIRU</div></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">サークル紹介</a></li>
+        <li><a href="activities.html">活動紹介</a></li>
+        <li><a href="schedule.html">出演予定・お知らせ</a></li>
+        <li><a href="gallery.html">写真ギャラリー</a></li>
+        <li><a href="songs.html">曲紹介</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="f-bottom">&copy; 2026 和太鼓サークル 素舞瑠（SUMAIRU）All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
